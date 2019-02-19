@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>登录</title>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+
+    <script type="text/javascript" src='../js/flexible.js'></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <section class='custom_page homework_video_page'>
+        <section class='custom_body'>
+            <!-- 头部状态栏 -->
+            <header class='state_header'>
+                <div class='left'>
+                    <div class='c1'>
+                        <img src="../images/test1.jpg">
+                        <p>学校名称</p>
+                    </div>
+
+                    <div class='c2'>
+                        <p class='l1'>
+                            <span class='s1'>一（三）班</span>
+                            <span class='s2'>班主任：田晓青</span>
+                            <span class='s3'>学生人数：40</span>
+                        </p>
+                        <p class='l2'>一段班级介绍</p>
+                    </div>
+                </div>
+
+                <div class='right'>
+                    <div class='c1'>
+                        <p class='l1'>16~24℃</p>
+                        <p class='l2'>东南风4~5级</p>
+                        <p class='l3'>PM2.5值：
+                            <span>30 优</span>
+                        </p>
+                    </div>
+                    <img class='c2' src="../images/icon1.png">
+                    <div class='c3'>
+                        <p class='l1'>13:44</p>
+                        <p class='l2'>2018年11月01日</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 主要内容区域 -->
+            <section class='main_content'>
+                <div class='l1'>
+                    <div class='part left'>
+                        <div class='p1'>本地视频</div>
+                        <div class='p2'>
+                            <img src="../images/test4.png">
+                        </div>
+                    </div>
+                    <div class='part right'>
+                        <div class='p1'>在线通话</div>
+                        <div class='p2'>
+                            <img src="../images/test5.png">
+                        </div>
+                    </div>
+                </div>
+                <div class='l2'>
+                    <div class='left'>
+                        <p class='value_p'><span class='parent'>选择家长</span><img src="../images/icon37.png"></p>
+                        <select class='parent_select'>
+                            <option value='家长1'>家长1</option>
+                            <option value='家长2'>家长2</option>
+                            <option value='家长3'>家长3</option>
+                            <option value='家长4'>家长4</option>
+                            <option value='家长5'>家长5</option>
+                            <option value='家长6'>家长6</option>
+                            <option value='家长7'>家长7</option>
+                            <option value='家长8'>家长8</option>
+                            <option value='家长9'>家长9</option>
+                            <option value='家长10'>家长10</option>
+                            <option value='家长11'>家长11</option>
+                            <option value='家长12'>家长12</option>
+                            <option value='家长13'>家长13</option>
+                            <option value='家长14'>家长14</option>
+                            <option value='家长15'>家长15</option>
+                            <option value='家长16'>家长16</option>
+                            <option value='家长17'>家长17</option>
+                            <option value='家长18'>家长18</option>
+                        </select>
+                    </div>
+                    <div class='right'>
+                        <button>关闭视频</button>
+                        <button>关闭音频</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+</body>
+<script type="text/javascript" src='../js/jquery.js'></script>
+<script type="text/javascript">
+    function initByChange(val){
+        $('.parent_select').val(val);
+        $('.parent_select').trigger('change');
+    }
+    
+    $('.parent_select').on('change', function(){
+        console.log(this.value);
+        $('.parent').text(this.value);
+    });
+
+    initByChange('家长6');
+</script>
+</html>

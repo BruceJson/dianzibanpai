@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>登录</title>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+
+    <script type="text/javascript" src='../js/flexible.js'></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/pagination.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <section class='custom_page growing_page'>
+        <section class='custom_body'>
+            <!-- 头部状态栏 -->
+            <header class='state_header'>
+                <div class='left'>
+                    <div class='c1'>
+                        <img src="../images/test1.jpg">
+                        <p>学校名称</p>
+                    </div>
+
+                    <div class='c2'>
+                        <p class='l1'>
+                            <span class='s1'>一（三）班</span>
+                            <span class='s2'>班主任：田晓青</span>
+                            <span class='s3'>学生人数：40</span>
+                        </p>
+                        <p class='l2'>一段班级介绍</p>
+                    </div>
+                </div>
+
+                <div class='right'>
+                    <div class='c1'>
+                        <p class='l1'>16~24℃</p>
+                        <p class='l2'>东南风4~5级</p>
+                        <p class='l3'>PM2.5值：
+                            <span>30 优</span>
+                        </p>
+                    </div>
+                    <img class='c2' src="../images/icon1.png">
+                    <div class='c3'>
+                        <p class='l1'>13:44</p>
+                        <p class='l2'>2018年11月01日</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 主要内容区域 -->
+            <section class='main_content'>
+                <div class='left_chain'></div>
+                <div class='right_chain'></div>
+                <div class='frame_box'>
+                    <div class='frame_content'>
+                        <div class='top_title'>
+                            <img class='img1' src="../images/icon24.png">
+                            <img class='img2' src="../images/icon23.png">
+                        </div>
+                        <div class='list'>
+                            <div class='item'>
+                                <p class='l1'>今日运动</p>
+                                <div class='l2'>
+                                    <img src="../images/test1.jpg">
+                                    <img src="../images/test1.jpg">
+                                    <img src="../images/test1.jpg">
+                                </div>
+                                <p class='l3'>2018年10月10日</p>
+                            </div>
+                            <div class='item'>
+                                <p class='l1'>今日运动</p>
+                                <div class='l2'>
+                                    <img src="../images/test1.jpg">
+                                    <img src="../images/test1.jpg">
+                                    <img src="../images/test1.jpg">
+                                </div>
+                                <p class='l3'>2018年10月10日</p>
+                            </div>
+                            <div class='item'>
+                                <p class='l1'>今日运动</p>
+                                <div class='l2'>
+                                    <img src="../images/test1.jpg">
+                                    <img src="../images/test1.jpg">
+                                    <img src="../images/test1.jpg">
+                                </div>
+                                <p class='l3'>2018年10月10日</p>
+                            </div>
+                            <div class='item'>
+                                <p class='l1'>今日运动</p>
+                                <div class='l2'>
+                                    <img src="../images/test1.jpg">
+                                    <img src="../images/test1.jpg">
+                                    <img src="../images/test1.jpg">
+                                </div>
+                                <p class='l3'>2018年10月10日</p>
+                            </div>
+
+                            <div class='cut_line'></div>
+                        </div>
+                        <div class='pagination_box'>
+                            <div class='pagination' id='pagination'></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+</body>
+<script type="text/javascript" src='../js/jquery.js'></script>
+<script type="text/javascript" src='../js/pagination.js'></script>
+<script type="text/javascript">
+var arr = new Array(100).join(',').split(',');
+arr.forEach(function (o, i) {
+    arr[i] = i + 1;
+});
+$('#pagination').pagination({
+    dataSource: arr,
+    pageSize: 5,
+    showGoInput: true,
+    showGoButton: true,
+    formatGoInput: '跳转到：<%= input %>',
+    callback: function (data, pagination) {
+        console.log(data, pagination);
+    }
+})
+</script>
+
+</html>
